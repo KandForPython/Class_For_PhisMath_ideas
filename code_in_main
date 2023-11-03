@@ -1,0 +1,70 @@
+class Fraction:
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
+
+    def get_numerator(self):
+        return self.numerator
+
+    def get_denominator(self):
+        return self.denominator
+
+    def set_numerator(self, numerator):
+        self.numerator = numerator
+
+    def set_denominator(self, denominator):
+        self.denominator = denominator
+
+    def display(self, numerator, denominator):
+        print(f'{self.numerator} / {self.denominator}')
+
+    def fraction(self, a, b):
+        if 0 < self.denominator:
+            print(self.numerator / self.denominator)
+        else:
+            print("Ошибка")
+    def add(self, result):
+        new_numerator = self.numerator * result.denomirator + self.denomirator * result.numerator
+        new_denomirator = self.denominator * result.denomirator
+        return Fractions(new_numerator, new_denomirator)
+
+    def subtract(self, result):
+        new_numerator = self.numerator * result.denomirator - self.denomirator * result.numerator
+        new_denomirator = self.denominator * result.denomirator
+        return Fractions(new_numerator, new_denomirator)
+
+    def multiplication(self, result):
+        new_numerator = self.numerator * result.numerator
+        new_denomirator = self.denominator * result.denomirator
+        return Fractions(new_numerator, new_denomirator)
+
+    def division(self, result):
+        new_numerator = self.numerator * result.denomirator
+        new_denomirator = self.denominator * result.numerator
+        return Fractions(new_numerator, new_denomirator)
+
+    class TemperatureConverter:
+        @staticmethod
+        def celsius_to_fahrenheit(celsius):
+            return (celsius * 9 / 5) + 32
+
+        @staticmethod
+        def fahrenheit_to_celsius(fahrenheit):
+            return (fahrenheit - 32) * 5 / 9
+
+class MetricToEnglishConverter:
+    @staticmethod
+    def kilometers_to_miles(kilometers):
+        return kilometers * 0.621371
+
+    @staticmethod
+    def miles_to_kilometers(miles):
+        return miles * 1.60934
+
+    @staticmethod
+    def gallons_to_liters(gallons):
+        return gallons * 3.78541
+
+    @staticmethod
+    def liters_to_gallons(liters):
+        return liters * 0.264172
