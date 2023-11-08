@@ -15,7 +15,7 @@ class Fraction:
     def set_denominator(self, denominator):
         self.denominator = denominator
 
-    def display(self, numerator, denominator):
+    def display(self):
         print(f'{self.numerator} / {self.denominator}')
 
     def fraction(self, a, b):
@@ -24,24 +24,24 @@ class Fraction:
         else:
             print("Ошибка")
     def add(self, result):
-        new_numerator = self.numerator * result.denomirator + self.denomirator * result.numerator
-        new_denomirator = self.denominator * result.denomirator
-        return Fractions(new_numerator, new_denomirator)
+        new_numerator = self.numerator * result.denominator + self.denominator * result.numerator
+        new_denominator = self.denominator * result.denominator
+        return Fraction(new_numerator, new_denominator)
 
     def subtract(self, result):
-        new_numerator = self.numerator * result.denomirator - self.denomirator * result.numerator
-        new_denomirator = self.denominator * result.denomirator
-        return Fractions(new_numerator, new_denomirator)
+        new_numerator = self.numerator * result.denominator - self.denomirator * result.numerator
+        new_denominator = self.denominator * result.denominator
+        return Fraction(new_numerator, new_denominator)
 
     def multiplication(self, result):
         new_numerator = self.numerator * result.numerator
-        new_denomirator = self.denominator * result.denomirator
-        return Fractions(new_numerator, new_denomirator)
+        new_denomirator = self.denominator * result.denominator
+        return Fraction(new_numerator, new_denomirator)
 
     def division(self, result):
-        new_numerator = self.numerator * result.denomirator
+        new_numerator = self.numerator * result.denominator
         new_denomirator = self.denominator * result.numerator
-        return Fractions(new_numerator, new_denomirator)
+        return Fraction(new_numerator, new_denominator)
 
     class TemperatureConverter:
         @staticmethod
@@ -68,3 +68,9 @@ class MetricToEnglishConverter:
     @staticmethod
     def liters_to_gallons(liters):
         return liters * 0.264172
+
+object1 = Fraction(4,8)
+object2 = Fraction(1,2)
+# print(object1.add(object2))
+resulte = object1.add(object2)
+print(resulte.display)
